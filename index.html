@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;display=swap'>
+    <link rel="stylesheet" href="styles.css">
+    <title>Weather APP</title>
+</head>
+<body>
+    <!-- whole container -->
+    <div class="container">
+        <!-- whole app -->
+        <div class="app-container" id="contain" data-theme="light">
+        <!-- top bar -->
+            <div class="app-top-bar">
+                <h1 class=app-heading>Weather</h1>
+                <button class="button button-small" id="toggler">
+                    <i class="fas fa-light fa-moon" id="toggler-icon"></i>
+                </button>
+            </div> 
+         <!-- end of top bar -->    
+         
+         <!--  search -->
+            <div class="search">
+                <input type="text" class="search-bar" placeholder="Search">
+                <button class="btn-look"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.35em"
+                    width="1.35em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z">
+                    </path>
+                  </svg></button>
+            </div>
+            <!-- end of search -->
+
+            <!-- WEATHER --> 
+            <div class="weather">
+                <h2 class="city">Weather in </h2>
+            </div>
+            <!-- temperature --> 
+            <div class="button button-dial">
+                <span class="button-dial-spoke"></span>
+                <span class="button-dial-spoke"></span>
+                <span class="button-dial-spoke"></span>
+                <span class="button-dial-spoke"></span>
+                <span class="button-dial-spoke"></span>
+                <span class="button-dial-spoke"></span>
+                <div class="button-dial-top"></div>
+                <div class="button-dial-label" id="temp">
+                    <i class="fas fa-light fa-temperature-half"></i>
+                    27&deg;C
+                </div>
+            </div>    
+            <!-- img & description -->
+                <div class="img-desc">
+                    <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon">
+                    <div class="description">Cloudy</div>
+                </div>
+            <!-- humidity and wind flex cont -->
+                <div class="flex-button-container">
+                    <button class="button button-large">
+                        <i class="fas fa-light fa-cloud-rain fa-2xl" style="color: #317acee3"></i><span class="humidity">13%</span>
+                    </button>
+                    <button class="button button-large">
+                        <i class="fas fa-light fa-wind fa-2xl" style="color: #0f345fe3" id="wind"></i><span class="windy">6 Km/h
+                        </span></button>
+                </div>     
+        </div>
+    </div>
+
+
+    <script src="app.js" defer></script>
+</body>
+</html>
